@@ -1,0 +1,50 @@
+package com.loiane.estruturadados.vetor;
+
+public class Vetor {
+
+	private String[] elementos;
+	private int tamanho;
+
+	public Vetor(int capacidade) {
+		this.elementos = new String[capacidade];
+		// construtores sao o melhor lugar para inicializacao
+		this.tamanho = 0;
+	}
+
+	// metodo
+	public void adicionaOld(String elemento) {
+		for (int i = 0; i < elementos.length; i++) {
+			if (this.elementos[i] == null) {
+				this.elementos[i] = elemento;
+				break;
+			}
+		}
+	}
+
+	public void adicionaOld2(String elemento) throws Exception {
+
+		if (this.tamanho < this.elementos.length) {
+			this.elementos[tamanho] = elemento;
+			this.tamanho++;
+		} else {
+			// quando lançamos uma nova exceção precisamos incluir
+			// throws Exception na assinatura do metodo
+			throw new Exception("Vetor já está cheio. Não é possivel inserir mais");
+		}
+
+	}
+
+	public boolean adicionaOld2(String elemento) throws Exception {
+
+		if (this.tamanho < this.elementos.length) {
+			this.elementos[tamanho] = elemento;
+			this.tamanho++;
+		} else {
+			// quando lançamos uma nova exceção precisamos incluir
+			// throws Exception na assinatura do metodo
+			throw new Exception("Vetor já está cheio. Não é possivel inserir mais");
+		}
+
+	}
+	
+}

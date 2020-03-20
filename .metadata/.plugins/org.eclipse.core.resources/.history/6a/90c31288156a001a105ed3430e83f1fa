@@ -1,0 +1,8 @@
+package com.loiane.estruturadados.vetor.teste;
+
+public class Aula3 {
+	
+	Vetor vetor = new Vetor(5);
+	
+
+}

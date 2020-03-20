@@ -1,0 +1,21 @@
+package com.loiane.estruturadados.vetor;
+
+public class Vetor {
+
+	private String[] elementos;
+	
+	public Vetor(int capacidade) {
+		this.elementos = new String[capacidade];
+	}
+	
+	public void adicionaOld (String elemento) {
+		for (int i = 0; i < elementos.length; i ++) {
+			if  (elementos[i] == null) {
+				elementos[i] = elemento;
+				break;
+			}
+		}
+	}
+	
+	
+}
